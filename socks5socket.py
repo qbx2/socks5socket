@@ -38,3 +38,6 @@ def create_connection(*args):
     s = socket()
     s.connect(args[0])
     return s
+
+#import sys
+#sys.modules['socket']=sys.modules[__name__]
