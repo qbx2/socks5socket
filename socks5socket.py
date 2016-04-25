@@ -6,8 +6,8 @@ _GLOBAL_DEFAULT_TIMEOUT = _socket._GLOBAL_DEFAULT_TIMEOUT
 proxy_address = ()
 
 class socket(_socket.socket):
-    def __init__(self, *args):
-        super().__init__(*args)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     def connect(self, address):
         super().connect(proxy_address) # socks5 proxy
@@ -41,3 +41,4 @@ def create_connection(*args):
 
 #import sys
 #sys.modules['socket']=sys.modules[__name__]
+#to use this method, this line must be evaluated before any socket related modules imported
