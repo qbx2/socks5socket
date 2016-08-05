@@ -41,4 +41,4 @@ def create_connection(*args):
 
 #import sys
 #sys.modules['socket']=sys.modules[__name__]
-#to use this method, this line must be evaluated after any socket related modules imported
+#to use this method, this line must be evaluated after all socket related modules imported
